@@ -54,7 +54,7 @@ window.onload = function () {
     bottompipeImg.src = "./bottompipe.png";
 
     requestAnimationFrame(update);
-    setInterval(placePipes, 1500);
+    setInterval(placePipes, 2000);
     
     // Add event listeners for keyboard, mouse, and touch input
     document.addEventListener("keydown", moveBird);
