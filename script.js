@@ -29,9 +29,9 @@ let toppipeImg;
 let bottompipeImg;
 
 // game physics
-let velocityX = -1.5;
+let velocityX = -2;
 let velocityY = 0;
-let gravity = 0.2;
+let gravity = 0.4;
 let gameover = false;
 let score = 0;
 
@@ -54,7 +54,7 @@ window.onload = function () {
     bottompipeImg.src = "./bottompipe.png";
 
     requestAnimationFrame(update);
-    setInterval(placePipes, 2000);
+    setInterval(placePipes, 1500);
     
     // Add event listeners for keyboard, mouse, and touch input
     document.addEventListener("keydown", moveBird);
@@ -145,10 +145,10 @@ function moveBird(e) {
     // Detect input method
     if (e.type === "keydown") {
         if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
-            velocityY = -4;
+            velocityY = -6;
         }
     } else if (e.type === "click" || e.type === "touchstart") {
-        velocityY = -4;
+        velocityY = -6;
     }
 
     // Reset the game if it's over
