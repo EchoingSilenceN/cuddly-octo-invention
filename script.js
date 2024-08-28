@@ -29,9 +29,9 @@ let toppipeImg;
 let bottompipeImg;
 
 // game physics
-let velocityX = -2;
+let velocityX = -1.5;
 let velocityY = 0;
-let gravity = 0.4;
+let gravity = 0.2;
 let gameover = false;
 let score = 0;
 
@@ -54,7 +54,7 @@ window.onload = function () {
     bottompipeImg.src = "./bottompipe.png";
 
     requestAnimationFrame(update);
-    setInterval(placePipes, 1500);
+    setInterval(placePipes, 2000);
     
     // Add event listeners for keyboard, mouse, and touch input
     document.addEventListener("keydown", moveBird);
@@ -107,7 +107,7 @@ function update() {
     context.fillText(score, 5, 45);
     if (gameover) {
         context.font = "30px sans-serif";
-        context.fillText("AWW! GAME OVER!!!", 5, 90);
+        context.fillText("GAME OVER!!!", 5, 90);
         context.fillText("Click to Play Again", 50, 300);
     }
 }
@@ -148,7 +148,7 @@ function moveBird(e) {
             velocityY = -6;
         }
     } else if (e.type === "click" || e.type === "touchstart") {
-        velocityY = -6;
+        velocityY = -4;
     }
 
     // Reset the game if it's over
