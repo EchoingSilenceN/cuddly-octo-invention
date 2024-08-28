@@ -145,10 +145,10 @@ function moveBird(e) {
     // Detect input method
     if (e.type === "keydown") {
         if (e.code == "Space" || e.code == "ArrowUp" || e.code == "KeyX") {
-            velocityY = -6;
+            velocityY = -4;
         }
     } else if (e.type === "click" || e.type === "touchstart") {
-        velocityY = -6;
+        velocityY = -4;
     }
 
     // Reset the game if it's over
